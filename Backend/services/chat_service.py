@@ -1,7 +1,8 @@
-from agents.agent import agent, Context
+from agents.agent import Context
+from dependencies import get_agent
 
 
-def chat_with_agent(message: str, user_id: str):
+def chat_with_agent(agent, message: str, user_id: str):
     result = agent.invoke(
         {
             "messages": [
